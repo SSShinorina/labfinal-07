@@ -5,6 +5,11 @@ public class StudentList {
 	public static void main(String[] args) {
 
 //		Check arguments
+		if(args==null || args.length!=1)
+		{
+			System.out.println("Please enter arg");
+			return;
+		}
 		if(args[0].equals("a")) {
 			System.out.println("Loading data ...");			
 			try {
@@ -17,19 +22,7 @@ public class StudentList {
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");
 		}
-		else if(args[0].equals("NULL")) {
-			System.out.println("SHUT DOWN");
-			try {
-				BufferedReader s = new BufferedReader(
-						new InputStreamReader(
-								new FileInputStream("students.txt")));
-				String r = s.readLine();
-				String i[] = r.split(",");
-				for(String j : i) { System.out.println(j); }
-			} catch (Exception e){}
-			System.out.println("Data Loaded.");
 
-		}
 		else if(args[0].equals("r")) 
 		{
 			System.out.println("Loading data ...");			
