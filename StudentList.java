@@ -49,10 +49,9 @@ public class StudentList {
 						new InputStreamReader(
 								new FileInputStream("students.txt")));
 				String FileReader = StreamReader.readLine();
-				System.out.println(FileReader);
 				String FileStreamReader[] = FileReader.split(",");
 				Random x = new Random();
-				int y = x.nextInt();
+				int y = x.nextInt(FileStreamReader.length);
 				System.out.println(FileStreamReader[y]);
 			} catch (Exception e) {
 			}
