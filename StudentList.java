@@ -81,12 +81,12 @@ public class StudentList {
 								new FileInputStream("students.txt")));
 				String FileReader = StreamReader.readLine();
 				String FileStreamReader[] = FileReader.split(",");
-				boolean done = false;
+				boolean submit = false;
 				String t = args[0].substring(1);
-				for (int FileStreamReaderdx = 0; idx < FileStreamReader.length && !done; idx++) {
+				for (int FileStreamReaderdx = 0; idx < FileStreamReader.length && !submit; idx++) {
 					if (FileStreamReader[FileStreamReaderdx].equals(t)) {
 						System.out.println("We found it!");
-						done = true;
+						submit = true;
 					}
 				}
 			} catch (Exception e) {
